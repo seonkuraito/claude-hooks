@@ -24,7 +24,7 @@ Hooks 與 skills 的整合方式不同：hooks 沒有探索目錄，每個 hook 
 ~/.claude/hooks/<name>                           ← symlink，逐一建立
 ```
 
-與 [claude-skills](https://github.com/seon-kuraito/claude-skills) 相同，各 hook 會分別連結至執行環境。直接安裝在 `~/.claude/hooks/` 的官方或第三方 hook 不會納入本 repo。`settings.json` 中的登記指向 `~/.claude/hooks/<hook-name>/hook.sh`，再由 symlink 解析至本 repo。
+與 [claude-skills](https://github.com/seonkuraito/claude-skills) 相同，各 hook 會分別連結至執行環境。直接安裝在 `~/.claude/hooks/` 的官方或第三方 hook 不會納入本 repo。`settings.json` 中的登記指向 `~/.claude/hooks/<hook-name>/hook.sh`，再由 symlink 解析至本 repo。
 
 　
 
@@ -60,7 +60,7 @@ scripts/run-checks.sh              # 全部 hook
 scripts/run-checks.sh <hook-name>  # 單一 hook
 ```
 
-這支腳本執行結構層與腳本層檢查，兩者都不消耗模型 token。hook 由事件觸發，模型不會路由到它，因此不設模型層。共通規則來自 [claude-skills](https://github.com/seon-kuraito/claude-skills) 的 `sk-skill-author/references/verification.md`；並列 repo 不存在時會跳過規則比對，單獨 clone 本 repo 仍可執行。
+這支腳本執行結構層與腳本層檢查，兩者都不消耗模型 token。hook 由事件觸發，模型不會路由到它，因此不設模型層。共通規則來自 [claude-skills](https://github.com/seonkuraito/claude-skills) 的 `sk-skill-author/references/verification.md`；並列 repo 不存在時會跳過規則比對，單獨 clone 本 repo 仍可執行。
 
 　
 
